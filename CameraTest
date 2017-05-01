@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <time.h>
+#include "E101.h" 
+
+int main(){
+init();
+
+int count = 0;
+int max_white = 0;
+int max_black = 0;
+int average = 0;
+
+
+take_picture();
+
+while(count<240){
+	int x = 0+count;
+	char pixel = get_pixel(120, x, 3);
+	display_picture(2,0);
+	printf("%d\n", pixel);
+	
+	if(pixel>max_white){
+		max_white=pixel;
+	}
+	if(pixel>max_black && pixel<100){
+		max_black = pixel;
+	}
+
+
+count = count+10;
+}
+
+average = (max_black+max_white)/2;
+printf("%d Is your max value", max_white);	
+printf("%d\n");
+printf("%d Is your max black value", max_black);
+printf("%d\n");
+printf("%d Is your average value", average);
+
+
+
+}
