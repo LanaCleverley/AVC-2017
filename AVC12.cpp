@@ -102,7 +102,7 @@ int move(int error){
 			quadrant3=false;		//set quadrant 3 to be false
 		} 
 		
-		if((getSensor(2)>300) && (getSensor(0)>300) && gate>1200){
+		if((getSensor(2)>300) && (getSensor(0)>300) && gate>1100){
 			quadrant4=true;
 			quadrant1=false;
 			quadrant2=false;

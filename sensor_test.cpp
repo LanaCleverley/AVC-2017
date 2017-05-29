@@ -5,7 +5,9 @@
 int getSensor(int side);
 int turnLeft(int leftMotor, int rightMotor);
 int turnRight(int leftMotor, int rightMotor);
-bool t = true;
+bool t = false;
+bool move = true;
+int doQuad4();
 
 int main(){
 	init();
@@ -17,18 +19,24 @@ int main(){
 		printf("Front - %d\n", front);
 		printf("Right - %d\n", right);
 	}
+	while(move){
+		doQuad4();
+	}
 }
+
 int doQuad4(){
 	int Left = getSensor(2);
 	int Right = getSensor(0);
+	int front = getSensor(1);
+	if(front>450){
+		turnLeft(-50,-50); //Making the robot go forward. Same as code in move
+	}
 	if(Left<Right){
-		turnRight(50, 25);
+		turnLeft(25, 55);
+
 	}
-	if(Left>Right){
-		turnLeft(50,25);
-	}
-	else{
-		turnLeft(50,50); //Making the robot go forward. Same as code in move
+	else if(Left>Right){
+		turnRight(55,25);
 	}
 	return 0;
 }
