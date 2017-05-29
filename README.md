@@ -1,1 +1,2 @@
 # AVC-2017
+This is a project repository for the Victoria University of Wellington ENGR101 autonomous vehicle challenge (AVC) 2017. It contains the code for 'Blue Pen Fam', a team of 5 who met every monday afternoon for the month of May 2017. The team first met during the 1st week of May and built their robot which was finally tested on the 29th of May 2017. AVC10.cpp allowed the robot to complete quadrants 1,2 and 3 sucessfully which resulted in a A- grade.
